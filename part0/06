@@ -1,0 +1,10 @@
+note over browser:
+after submitted, browser starts 
+executing js-code to add new note
+then renders notes to display
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+server save the new note
+end note
+server-->browser: message
