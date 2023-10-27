@@ -95,7 +95,7 @@ app.post('/api/persons', (request, response) => {
     response.json(newPerson)
 })
 
-const PORT = 3001
+const PORT = 3106
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 })
