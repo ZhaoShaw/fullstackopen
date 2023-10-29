@@ -43,7 +43,7 @@ const App = () => {
   }
 
   const handleDelPerson = (event) => {
-    let delPerson = persons.find(person => person.id === Number(event.target.value))
+    let delPerson = persons.find(person => person.id === event.target.value)
     // console.log(delPerson);
     let delConfirm = window.confirm(`Delete ${delPerson.name}`)
     if (delConfirm) {
@@ -64,7 +64,7 @@ const App = () => {
 
   const addPerson = (event) => {
     event.preventDefault()
-    let findSamePerson = persons.find((person) => person.name === newName)
+    let findSamePerson = persons.find((person) => person.name.toLowerCase() === newName.toLowerCase())
     if (findSamePerson) {
       let sameConfirm = window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)
       if (sameConfirm) {
@@ -86,7 +86,7 @@ const App = () => {
               })
           })
           .catch(error => {
-            setMessage(`Information of ${updatePerson.name} has already been removed from server`)
+            setMessage(`Person validation failed: ${error}`)
             notificationReset()
             requestService
               .getAll()
@@ -110,6 +110,10 @@ const App = () => {
           setPersons(persons.concat(response))
           setNewName('')
           setNewPhoneNumber('')
+        })
+        .catch(error => {
+          setMessage(`Person validation failed: ${error}`)
+          notificationReset()
         })
     }
   }
