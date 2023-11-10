@@ -1,0 +1,10 @@
+POST http://localhost:3107/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsZXgiLCJpZCI6IjY1NDY3YjkwNGJiZTVkYTFiNDM1NDcyNiIsImlhdCI6MTY5OTM3MzQ3Mn0.PHFAnruudGaycXvJc-rQ3HFwT7S3Ho_2jf950IWDQ0I
+
+{
+  "title": "New Things4",
+  "author": "hello",
+  "url": "https://hello.com",
+  "likes": 1000
+}
