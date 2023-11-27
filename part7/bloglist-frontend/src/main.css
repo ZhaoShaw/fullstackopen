@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input-custom {
+    @apply block w-full rounded-lg border border-gray-300
+    bg-gray-50 p-2.5 text-sm text-gray-900
+    focus:border-blue-500 focus:ring-blue-500;
+  }
+  .card-custom {
+    @apply m-auto mt-6 flex max-w-4xl flex-col space-y-4 rounded-2xl border
+      border-blue-100 bg-blue-200 p-8 text-2xl font-bold shadow-xl;
+  }
+  .btn-custom {
+    @apply font-bold underline;
+  }
+}

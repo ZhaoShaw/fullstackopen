@@ -1,0 +1,4 @@
+/node_modules
+.vscode
+
+cypress.config.js
